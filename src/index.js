@@ -23,6 +23,13 @@ class Container extends React.Component{
 	}
 }
 
+class Display extends React.Component {
+	render(){
+		const string = this.props.data.join('');
+		return <div className="Display">{string} </div>
+	}
+}
+
 class App extends React.Component{
 	render(){
 		return (
