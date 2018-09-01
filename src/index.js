@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import math from 'mathjs';
 import './index.css';
 
 class Button extends React.Component{
@@ -31,9 +32,28 @@ class Display extends React.Component {
 }
 
 class App extends React.Component{
+
+	constructor(){
+		super();
+		this.state = { operations: []}
+	}
+
+	calculateOperations = () => {
+		let result = this.state.operations.join('');
+		if (result) {
+			result = math.eval(result);
+			result = math.format(result, {precision: 14});
+			result = String(result);
+			this.setState({
+				operations: [result],
+			})
+		}
+	}
+
 	render(){
 		return (
 			<div className="App">
+				<Display data={this.state.operations}/>
 				<Container>
 					<Button label="C" value="clear"/>
 					<Button label="7" value="7"/>
