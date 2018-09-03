@@ -13,13 +13,13 @@ body{
 	width: 300px;
 	perspective:  0 200px;
 	background: #EBEBEB;
-	transform: scale(0.8) skew(20deg);
+	transform: scale(0.9) skew(20deg);
 	transition: transform .5s ease .5s;
 	position: relative;
 }
 
-.App: hover{
-	transform: scale(1.5) skew(0deg);
+.App:hover{
+	transform: scale(1.0) skew(0deg);
 	transition: transform .6s;
 }
 
