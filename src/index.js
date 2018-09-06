@@ -13,7 +13,7 @@ class Button extends React.Component{
 				onClick = {this.props.onClick}
 				data-size = {this.props.size}
 				data-value = {this.props.value}
-				className = "Button"
+				className = "button"
 			>
 				{this.props.label}
 			</div>
@@ -23,14 +23,14 @@ class Button extends React.Component{
 
 class Container extends React.Component{
 	render(){
-		return <div className="Container">{this.props.children}</div>
+		return <div className="container">{this.props.children}</div>
 	}
 }
 
 class Display extends React.Component {
 	render(){
 		const string = this.props.data.join('');
-		return <div className="Display">{string} </div>
+		return <div className="display">{string} </div>
 	}
 }
 
@@ -85,7 +85,7 @@ class App extends React.Component{
 
 	render(){
 		return (
-			<div className="App">
+			<div className="app">
 				<Display data={this.state.operations}/>
 				<Container>
 					<Button onClick={this.handleClick}  label="+" value="+"/>

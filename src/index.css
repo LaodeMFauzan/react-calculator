@@ -8,7 +8,7 @@ body{
 	overflow: hidden;
 }
 
-.App{
+.app{
 	height: 400px;
 	width: 300px;
 	perspective:  0 200px;
@@ -18,22 +18,22 @@ body{
 	position: relative;
 }
 
-.App:hover{
+.app:hover{
 	transform: scale(1.0) skew(0deg);
 	transition: transform .6s;
 }
 
-.App:hover::before{
+.app:hover::before{
 	opacity: 0;
 	height: 0;
 }
 
-.App:hover::after{
+.app:hover::after{
 	opacity: 0;
 	width:  0;
 }
 
-.App::before{
+.app::before{
 	position: absolute;
 	content: '';
 	background: #bdc7b7;
@@ -50,7 +50,7 @@ body{
 	border-bottom-right-radius: 1px;
 }
 
-.App::after {
+.app::after {
   position: absolute;
   content: '';
   background: #d7ddd3;
@@ -67,14 +67,14 @@ body{
   border-bottom-right-radius: 1px;
 }
 
-.Container{
+.container{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	height: 80%;
 }
 
-.Button {
+.button {
   background: #cad2c5;
   /* Old browsers */
   background: -moz-linear-gradient(45deg, #cad2c5 0%, #abb5aa 100%);
@@ -97,24 +97,24 @@ body{
   min-width: 25%;
 }
 
-.Button[data-size="2"] {
+.button[data-size="2"] {
   height: 40%;
 }
 
-.Button[data-value="null"] {
+.button[data-value="null"] {
   pointer-events: none;
 }
 
-.Button:hover {
+.button:hover {
   background: #d7ddd3;
   cursor: pointer;
 }
 
-.Button:active {
+.button:active {
   background: #bdc7b7;
 }
 
-.Display {
+.display {
   background: #2B293D;
   color: #59C3C3;
   text-shadow: 0 0 5px rgba(89,195,195,0.5);
@@ -129,7 +129,7 @@ body{
   position: relative;
 }
 
-.Display::after {
+.display::after {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
   background: white;
   /* Old browsers */
